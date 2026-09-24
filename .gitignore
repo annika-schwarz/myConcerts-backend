@@ -1,0 +1,4 @@
+# enthält alle installierten Node.js Abhängigkeiten, kann sehr groß sein und sollte nicht in das Versionskontrollsystem aufgenommen werden.
+node_modules/
+# schließt die .env-Datei aus, die sensible Informationen wie API-Schlüssel und Datenbank-Passwörter enthalten kann.
+.env
