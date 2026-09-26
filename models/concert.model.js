@@ -4,7 +4,7 @@ const concertSchema = new mongoose.Schema(
     {
         artist: { type: String, required: true, trim: true }, // Künstler, erforderlich, keine führenden oder nachfolgenden Leerzeichen
         date: { type: String, required: true },
-        venue: { type: String, required: true, trim: true },
+        venue: { type: String, default:'', trim: true },
         supportActs: { type: String, default: '', trim: true },  // Support-Acts, optional, initialisiert mit einem leeren String
         rating: { type: Number, default: null, min: 1, max: 5 },  // Bewertung, optional, initialisiert mit null
         comment: { type: String, default: '', trim: true },  // Kommentar, optional, keine führenden oder nachfolgenden Leerzeichen
