@@ -17,7 +17,7 @@ app.use(cors());            // Aktiviert CORS für alle Routen
 app.use(express.json());   // Aktiviert das  Verarbeiten / Parsen von JSON-Anfragen / JSON im Request-Body
 
 //Routes einbinden in die Express-Anwendung
-app.use('/', routes);  // Alle Routen werden unter dem Pfad '/' verfügbar gemacht
+app.use('/api', routes);  // Alle Routen werden unter dem Pfad '/' verfügbar gemacht
 
 // Port und MongoDB-URI aus der .env-Datei laden
 const PORT = process.env.PORT || 3000;           // Standardport ist 3000, falls keine Umgebungsvariable gesetzt ist
