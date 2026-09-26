@@ -5,7 +5,7 @@ dns.setServers(['8.8.8.8', '1.1.1.1']); // Nutzen direkt Google und Cloudflare D
 const express = require('express');     // Importiere das Express-Framework
 const mongoose = require('mongoose');  // Importiere Mongoose für die Arbeit mit MongoDB
 const cors = require('cors');         // Importiere CORS für Cross-Origin Resource Sharing
-require('dotenv').config();         // Importiert dotenv, um Umgebungsvariablen aus der .env-Datei zu laden
+require('dotenv').config();         // Importiere dotenv, um Umgebungsvariablen aus der .env-Datei zu laden
 
 //Routes importieren
 const routes = require('./routes');      //greift automatisch auf routes/index.js zu
