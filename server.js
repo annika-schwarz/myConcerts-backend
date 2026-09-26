@@ -24,13 +24,13 @@ const PORT = process.env.PORT || 3000;           // Standardport ist 3000, falls
 const MONGODB_URI = process.env.MONGODB_URI;     // MongoDB-Verbindungs-URI aus der .env-Datei
 
 mongoose
-    .connect(MONGODB_URI)
+    .connect(MONGODB_URI, { dbName: 'myConcertsDB' }) // dbName erzwingt den sauberen Datenbanknamen
     .then(() => {
-        console.log('Erfolgreich mit MongoDB verbunden');  // Bestätigt erfolgreiche Verbindung zu MongoDB in der Konsole
+        console.log('Erfolgreich mit MongoDB (myConcertsDB) verbunden');
         app.listen(PORT, () => {
-            console.log(`Server läuft auf Port ${PORT}`);  // Startet den Server und gibt den Port in der Konsole aus
+            console.log(`Server läuft auf Port ${PORT}`);
         });
     })
     .catch((err) => {
-        console.error('Fehler beim Verbinden mit MongoDB:', err.message); // Fehlermeldung auf Konsole, falls Verbindung zu MongoDB fehlschlägt 
+        console.error('Fehler beim Verbinden mit MongoDB:', err.message);
     });
