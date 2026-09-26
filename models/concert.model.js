@@ -32,6 +32,7 @@ concertSchema.virtual('isPast').get(function () {
     return concertDate < today;  // gibt true zurück, wenn das Konzertdatum in der Vergangenheit liegt, andernfalls false (heute = false, nicht vergangen)
 })
 
+// individuelle Definition der Standard-Methode toJSON von Mongoose-Docs
 // räumt Mongoose-Doc auf, bevor es als JavaScript-Objekt ans Angular-Frontend geschickt wird
 concertSchema.set('toJSON', {
     virtuals: true,  // virtuelle Felder in JSON-Ausgabe sichtbar und werden mitgesendet
